@@ -130,7 +130,11 @@ header h2 {
     max-width: 1100px;
     padding: 0 20px;
 }
-
+@media only screen and (max-width: 735px) {
+    .wrapper {
+        padding: 0 6px;
+    }
+}
 .center {
     display: block;
     text-align: center;
@@ -396,10 +400,6 @@ header h2 {
     font-weight: 400;
 }
 @media (max-width: 375px) {
-    .logo {
-        display: none;
-    }
-
     .headerTitle {
         font-size: 17px;
         font-weight: 300;
@@ -746,6 +746,14 @@ pre code {
 .navigationSlider .slidingNav ul li.siteNavItemActive a,
 .navigationSlider .slidingNav ul li.siteNavGroupActive a {
     background: rgb(34, 34, 34);
+}
+@media only screen and (max-width: 735px) {
+    .navigationSlider .slidingNav ul li a:focus,
+    .navigationSlider .slidingNav ul li a:hover,
+    .navigationSlider .slidingNav ul li.siteNavItemActive a,
+    .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+        background: #05A5D1;
+    }
 }
 .menuExpand {
     display: flex;
@@ -1178,8 +1186,14 @@ table tr th {
 }
 .mainContainer .wrapper .post{
     padding-top: 40px;
+    min-height: 80%;
 }
-
+@media only screen and (max-width: 735px) {
+    .mainContainer .wrapper .post{
+        padding-top: 30px;
+        overflow-x: scroll;
+    }
+}
 /** Homepage **/
 .container .wrapper .alignCenter h2 {
     text-align: center;
@@ -1285,7 +1299,87 @@ footer .copyright {
     color: rgba(255, 255, 255, 0.4);
     text-align: center;
 }
-
 .error {
     color: red;
+}
+.mdoc_select_menu_table {
+    margin-top: 10px;
+    border: 0;
+    display: none;
+    width: 100;
+    position: absolute;
+}
+.mdoc_select_menu_table td{
+    background-color: rgb(34, 34, 34);
+    border-top: solid 1px gray;
+    width: 100px;
+}
+@media only screen and (max-width: 735px) {
+    .mdoc_select_menu_table {
+        margin-top: 0px;
+        border: 0;
+        display: none;
+        width: 100;
+        position: absolute;
+    }
+    .mdoc_select_menu_table td{
+        background-color: #05A5D1;
+        border-top: solid 1px white;
+        width: 100px;
+        padding: 0px;
+        color: white;
+    }
+}
+.mdoc_toc_list {
+    margin-top: 30px;
+}
+#mdoc_toc_container {
+    display:flex;
+    width: 150%;
+}
+#mdoc_image_container {
+    width: 800px;
+    min-height: 80%;
+}
+@media only screen and (max-width: 735px) {
+    .mdoc_toc_list {
+        margin-top: 80px;
+    }
+    #mdoc_toc_container {
+        display:flex;
+        width: 100%;
+    }
+    #mdoc_image_container {
+        width: 100%;
+        min-height: 80%;
+    }
+}
+.viewer-fullscreen-exit, .viewer-close {
+    margin-top: 52px;
+}
+@media only screen and (max-width: 735px) {
+    .viewer-fullscreen-exit, .viewer-close {
+        margin-top: 100px;
+    }
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide p {
+    padding: 0 !important;
 }
